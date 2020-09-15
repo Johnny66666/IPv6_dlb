@@ -15,6 +15,23 @@ This is the download url of NS-2.35: https://www.isi.edu/nsnam/ns/ns-build.html
 After installing the Ubuntu system, firstly update the software and libraries in the system, enter the following commands in the terminal
 
 
+sudo app-get update #Update source list
+sudo app-get upgrade #Update installed packages
+sudo app-get dist-upgrade #Update software
+
+Install several required packages, enter the following commands in the terminal:
+sudo apt-get install build-essential
+sudo apt-get install tcl8.5 tcl8.5-dev tk8.5 tk8.5-dev #for tcl and tk
+sudo apt-get install libxmu-dev libxmu-headers #for nam
+
+Install the prepared ns-allinone-2.35.tar.gz, enter the following command in the terminal:
+tar -zxf ns-allinone-2.35.tar.gz #Unzip the installation package
+cd ns-allinone-2.35 #Enter the installation directory
+./install #Start installation
+
+
+
+
 
 Please put the following files or folders  ( 'sched_red.c',sched_red_mod.c','gso.sh', 'red.sh', 'Makefile')  in the same level directory.  
 For example: put all the above files and folders in the folder: "DECN"
