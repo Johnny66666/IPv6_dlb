@@ -30,14 +30,16 @@ This is the download url of NS-2.35: https://www.isi.edu/nsnam/ns/ns-build.html
 
 
 ## 3.Patching the DLB
-	Replace the host with the files you need to modify:
-	cd DECN
+	Replace the switch with the files you need to modify:
 	cp tcp_output.c ~/linux--4.1.13/net/ipv4/
 	cp tcp_intput.c ~/linux-4.1.13/net/ipv4/
 	cp tcp.h ~/linux-4.1.13/include/net/
+	
+	cp classifier-mpath.cc ~/ns-allinone-2.35/ns-allinone-2.35/ns-2.35/classifier/classifier-mpath.cc
+	cp drop-tail.h ~/ns-allinone-2.35/ns-allinone-2.35/ns-2.35/queue/drop-tail.h
+	cp drop-tail.cc ~/ns-allinone-2.35/ns-allinone-2.35/ns-2.35/queue/drop-tail.cc
+	
 
-	Replace the switch with the file you need to modify:
-	cp sch_red.c ~/linux-4.1.13/net/sched/
 	
 ## 4.Compile a new kernel for each host
 	The steps to compile the new kernel are as follows:
